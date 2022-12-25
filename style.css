@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+    background-color: white;
+    margin-left: 100px;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    height: 10px;
+    width: 100%;
+    display: inline-block;
+  }
+  .container input{
+    font-size: 15px;
+  }
+  .address {
+    height: 10px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 50px;
+  }
+  .address input{
+    font-size: 15px;
+  }
+  .checkpassword{
+    height: 10px;
+    width: 100%;
+    display: inline-block;
+  }
+  .checkpassword input{
+    font-size: 15px;
+  }
+  
+
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 10%;
+    padding: 5px;
+    background-color: #e9d7d7;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    padding: 1px;
+    background-color: rgb(211, 143, 143);
+  }
+  
+  
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: #6e9cd4;
+    color: rgb(255, 255, 255);
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: rgb(90, 90, 195);
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    text-align: center;
+  }
+  

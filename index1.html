@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+     function matchpass(){
+        var fname=document.form1.name1.value;
+        var lname=document.form1.name2.value;
+        var mail=document.form1.email.value;
+        var pwd=document.form1.password.value;
+        var secondpassword=document.form1.password2.value;
+        var phoneNum=document.form1.phone.value;
+        if(fname==null || fname==""){
+          alert("Fill the first name");
+          return false;
+        }
+        else if(lname==null || lname==""){
+           alert("Fill the last name");
+            return false;
+        }
+        else if(mail==null || mail==""){
+          alert("Please enter the mail address");
+          return false;
+        }
+        else if(mail.search(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)<0){
+          alert("Invalid email addresss");
+          return false;
+        }
+        else if(pwd==null || pwd==""){
+          alert("Please enter password!");
+          return false;
+        }
+        else if(pwd.length<8){
+          alert("Password must be at least 8 characters long");
+          return false;
+        }
+        else if(pwd.search(/[a-z]/)<0){
+          alert("Password must contain at least one lowercase letter");
+          return false;
+        }
+        else if(pwd.search(/[A-Z]/)<0){
+          alert("Password must contain at least one uppercase letter");
+          return false;
+        }
+        else if(pwd.search(/[0-9]/)<0){
+          alert("Password must contain at least one number");
+          return false;
+        }
+        else if(secondpassword==null || secondpassword==""){
+          alert("Enter 'Re-enter password'");
+          return false;
+        }
+        else if(pwd!=secondpassword){
+          alert("Password must be same!");
+          return false;
+        }
+        else if(phoneNum==null || phoneNum==""){
+          alert("Please enter mobile number");
+          return false;
+        }
+        else if(phoneNum.length!=10){
+            alert("Enter 10 digit number only!");
+            return false;
+        }
+    }
+    function myFunction() {
+        var x=document.getElementById("v1");
+        var y=document.getElementById("v2");
+        if(x.type==="password" && y.type==="password"){
+          x.type="text";
+          y.type="text";
+        } 
+        else{
+          x.type="password";
+          y.type="password";
+        }
+    }    
+    </script>      
+</head>
+<body>
+   <!--start wrapper-->
+<div id="wrapper">
+
+    <!--start body-->
+    <div id="body">
+    
+    <!--start header-->
+    <div id="banner">
+    <h1>Google <em>Form </em>Registration</h1>
+    <p>The fluid, responsive, HTML5, CSS only (image-free) version of the classic free template by MLP Design.</p>
+    <!-- menu -->
+    <label for="show-menu" class="responsive">&#9776;</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="topnav">
+    <li><a class="active">Home</a></li>
+    <li><a href="index2.html">Page 2</a></li>
+    <li><a href="index3.html">Page 3</a></li>
+    <li><a href="#">Page 4</a></li>
+    <li><a href="#">Page 5</a></li>
+    </ul>
+    <!-- end menu -->
+    </div>
+    <!--end of header-->
+        <!--start containter-->
+        <div id="container">
+                
+            <!--start content-->
+            <div id="content">
+                <!--post item-->
+                <form name="form1" method="post" onsubmit="return matchpass()">
+                    <div class="container">
+                      <img src="./image_search_167145235968012.png" alt="google" width="150">
+                      <p>To create an google account.</p>
+                      <hr>
+                  
+                      <input type="text" placeholder="First name" name="name1" id="name1">
+                      <input type="text" placeholder="Last name" name="name2" id="name2">
+                      <hr>
+                   
+                      <input type="text" placeholder="Username" name="email">
+                      <hr>
+                      
+                      <input type="password" placeholder="Enter Password" name="password" value="" id="v1">
+                      <input type="password" placeholder="Repeat Password" name="password2" value="" id="v2"><hr>
+                      <p><input type="checkbox" onsubmit="myFunction()">Show password</p>
+                      <p><sup>Atleast one number & one upercase & one lowercase</sup></p>
+                      <hr>
+                
+                      <input type="text" placeholder="Enter number" name="phone" id="phone">
+                      <hr>
+                
+                      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                  
+                      <button type="submit" class="registerbtn">Submit</button>
+                    </div>   
+                    <div class="container signin">
+                      <p>Already have an account? <a href="#">Sign in</a>.</p>
+                    </div>
+                  </form>
+                <!--another post item-->
+                <div class="item">
+                   
+                <!--end of another post item-->			
+            </div>
+            <!--end of content-->
+    
+        </div>
+        <!--end of container-->
+    
+    </div>
+    <!--end of body-->
+    </div>
+    <!--end of wrapper-->
+</body>
+</html>
